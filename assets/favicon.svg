@@ -1,0 +1,6 @@
+<svg role="img" aria-labelledby="title" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Source: Manzara favicon v2 (approved 17.11.2026): same arch geometry as the mark (replaces the earlier narrower redraw), small-mark stroke, optically centred on a Paper tile. -->
+  <title id="title">Manzara</title>
+  <rect width="64" height="64" rx="12" fill="#FAF8F3"/>
+  <path transform="translate(2.00 13.10) scale(0.6000)" d="M10 54V29C10 17 18 9 30 9S50 17 50 29V54M50 54V29C50 17 58 9 70 9S90 17 90 29V54" fill="none" stroke="#20221F" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+</svg>

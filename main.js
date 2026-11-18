@@ -1,124 +1,263 @@
-// Manzara — i18n (DE/EN) + scroll reveal + nav state. No dependencies.
 const I18N = {
   de: {
-    meta_title:"Manzara — Fotorealistische 3D-Immobilien-Rundgänge | Zürich",
-    meta_desc:"Fotorealistische 3D-Rundgänge Ihrer Immobilien — lokal in Zürich aufgenommen, innert 48 Stunden online. Kein Abo, Ihre Daten.",
-    nav_benefits:"Vorteile", nav_how:"Ablauf", nav_pricing:"Preise", nav_faq:"FAQ", nav_cta:"Pilot anfragen",
-    hero_eyebrow:"FOTOREALISTISCHE 3D-RUNDGÄNGE · ZÜRICH",
-    hero_h1:"Die schönste Aussicht auf jede Immobilie.",
-    hero_lead:"Wir verwandeln Ihre Objekte in fotorealistische 3D-Rundgänge — als stünde der Interessent mitten im Raum. Lokal in Zürich aufgenommen, innert 48 Stunden online.",
-    hero_cta1:"Demo ansehen", hero_cta2:"Pilot anfragen",
-    trust_1:"Lokales Zürcher Studio", trust_2:"Online in 48 Stunden", trust_3:"Kein Abo · Ihre Daten",
-    demo_label:"Demo-Rundgang", demo_cap:"Bewegen Sie sich frei durch den Raum — in Echtzeit, direkt im Browser.",
-    shift_eyebrow:"DER ERSTE EINDRUCK", shift_title:"Der erste Eindruck entsteht heute online.",
-    shift_body:"Kaufinteressenten entscheiden zuerst am Bildschirm, welche Objekte überhaupt eine Besichtigung wert sind. Eine Bilderstrecke oder ein klobiger 360°-Rundgang wird einer aussergewöhnlichen Immobilie nicht gerecht. Manzara zeigt den Raum, wie er wirklich ist — und gewinnt so Aufmerksamkeit, qualifiziert Besichtigungen vor und verkauft schneller.",
-    how_eyebrow:"ABLAUF", how_title:"In vier Schritten zum Rundgang.",
-    how_1_t:"Termin & Scan", how_1_b:"Wir kommen zu Ihnen ins Objekt und scannen es in rund einer Stunde — diskret und unkompliziert.",
-    how_2_t:"Rekonstruktion", how_2_b:"Unsere Technologie rekonstruiert den Raum fotorealistisch in 3D.",
-    how_3_t:"Hosting & Einbettung", how_3_b:"Sie erhalten einen gehosteten, gebrandeten Rundgang — als Link und zum Einbetten auf Homegate, ImmoScout24 oder Ihrer Website.",
-    how_4_t:"Innert 48 Stunden", how_4_b:"Vom Scan bis zum fertigen Rundgang vergehen maximal zwei Tage.",
-    incl_eyebrow:"INBEGRIFFEN", incl_title:"Alles, was Sie zum Vermarkten brauchen.",
-    incl_1:"Fotorealistischer 3D-Rundgang Ihres Objekts", incl_2:"Gehostet & sofort teilbar — Link und Einbettung",
-    incl_3:"In Ihrem Branding, mit Ihrem Logo", incl_4:"Optimiert für Mobile und Desktop",
-    incl_5:"Keine Abo-Bindung — der Rundgang gehört Ihnen", incl_6:"Lokaler Ansprechpartner in Zürich",
-    why_eyebrow:"WARUM MANZARA", why_title:"Schön. Lokal. Ohne Kompromisse.",
-    p1_t:"Fotorealistisch", p1_b:"Modernste Gaussian-Splat-Technologie erzeugt einen echten, lichtdurchfluteten Raumeindruck — kein steriles 3D-Modell, keine verzerrten Panoramen.",
-    p2_t:"Lokal & schnell", p2_b:"Ein Team aus Zürich, vor Ort und ansprechbar. Fertige Rundgänge innert 48 Stunden statt wochenlangem Warten.",
-    p3_t:"Ihre Daten, kein Abo", p3_b:"Gehostet ohne Lock-in, auf Wunsch in der Schweiz. Keine monatlichen Gebühren — der Rundgang bleibt Ihr Eigentum.",
-    price_eyebrow:"PREISE", price_title:"Transparent. Pro Objekt. Kein Abo.",
-    price_body:"Sie zahlen pro Rundgang — kein Abonnement, keine versteckten Kosten, keine Lock-in-Gebühren. Für unsere ersten Kundinnen und Kunden bieten wir Pilot-Konditionen zum Einführungspreis.",
-    price_btn:"Angebot für Ihr Objekt anfragen",
-    faq_eyebrow:"FAQ", faq_title:"Häufige Fragen.",
-    faq_q1:"Was kostet ein Rundgang?", faq_a1:"Sie zahlen pro Objekt, ohne Abo. Erstkundinnen und -kunden erhalten Pilot-Konditionen — fragen Sie uns für ein konkretes Angebot zu Ihrem Objekt.",
-    faq_q2:"Brauchen Käufer wirklich einen 3D-Rundgang?", faq_a2:"Interessenten entscheiden online, welche Objekte sie überhaupt besichtigen. Ein fotorealistischer Rundgang hebt Ihr Inserat hervor und qualifiziert Besichtigungen vor — weniger Leerläufe, mehr ernsthafte Interessenten.",
-    faq_q3:"Was ist mit Grundrissen und Massen?", faq_a3:"Der Rundgang ist das emotionale Verkaufselement. Bestehende Grundrisse binden wir gern ein; massstabsgetreue Grundrisse direkt aus dem Scan sind in Vorbereitung.",
-    faq_q4:"Wie aufwändig ist das für mich?", faq_a4:"Minimal. Wir übernehmen alles: Aufnahme vor Ort (ca. 1 Std.), Aufbereitung und Hosting. Sie erhalten einen fertigen Link zum Teilen und Einbetten.",
-    faq_q5:"Wo werden die Daten gehostet?", faq_a5:"Ohne Lock-in und auf Wunsch in der Schweiz. Der Rundgang gehört Ihnen und kann jederzeit gelöscht werden.",
-    faq_q6:"Sieht 3D bei Fenstern und Spiegeln nicht seltsam aus?", faq_a6:"Wir kuratieren jede Aufnahme und prüfen jeden Rundgang vor der Auslieferung. Sie zeigen Ihren Kundinnen und Kunden immer nur das polierte Ergebnis.",
-    cta_h:"Bereit, Ihr nächstes Objekt zum Strahlen zu bringen?", cta_sub:"Erstkunden-Pilot zum Einführungspreis — begrenzt verfügbar.", cta_btn:"Pilot anfragen",
-    foot_tagline:"Fotorealistische 3D-Immobilien-Rundgänge. Ein lokales Studio aus Zürich.",
-    foot_nav_t:"Navigation", foot_contact_t:"Kontakt", foot_city:"Zürich, Schweiz", foot_imprint:"Impressum", foot_privacy:"Datenschutz", foot_made:"Mit Sorgfalt gemacht in Zürich.",
-    _toggle:"EN"
+    meta_title: "Manzara · Rundgang und Grundriss für Immobilien im Verkauf, Zürich",
+    meta_description: "Ein fotorealistischer Rundgang im Browser und ein vermessener Grundriss, aus einem Besuch vor Ort. Für Immobilien im Verkauf im Raum Zürich.",
+    og_title: "Rundgang und Grundriss. Aus einem Besuch.",
+    og_description: "Ein fotorealistischer Rundgang im Browser und ein vermessener Grundriss, aus einem Besuch vor Ort. Für Immobilien im Verkauf im Raum Zürich.",
+    skip_link: "Zum Inhalt springen",
+    home_label: "Manzara Startseite",
+    nav_label: "Hauptnavigation",
+    nav_menu: "Menü",
+    nav_offer: "Angebot",
+    nav_showcase: "Beispielobjekt",
+    nav_process: "Ablauf",
+    nav_studio: "Studio",
+    nav_pilot: "Pilot besprechen",
+    hero_kicker: "Für Maklerinnen und Makler · Raum Zürich",
+    hero_title: "Rundgang und Grundriss. Aus einem Besuch.",
+    hero_intro: "Wir erfassen Ihr Verkaufsobjekt einmal vor Ort. Daraus entstehen ein fotorealistischer Rundgang, der im Browser läuft, und ein vermessener Grundriss mit Zimmerflächen.",
+    hero_cta: "Founding Pilot besprechen",
+    hero_note_label: "Was Kaufinteressierte sehen",
+    hero_note: "Abfolge, Proportionen und Licht verstehen, bevor man zur Besichtigung fährt.",
+    hero_note_detail: "Für Wohneigentum im Verkauf im Raum Zürich.",
+    showcase_visual_label: "Platzhalter: hier erscheint das Beispielobjekt",
+    showcase_status: "Beispielobjekt folgt",
+    showcase_caption: "Noch kein Rundgang und kein Grundriss zu sehen.",
+    showcase_kicker: "Beispielobjekt",
+    showcase_title: "Wir zeigen erst, was wir geprüft haben.",
+    showcase_body: "Wir arbeiten an einem ersten Beispielobjekt in Zürich. Wir veröffentlichen Rundgang und Grundriss hier erst, wenn beide unsere Prüfung bestanden haben. Bis dahin zeigen wir keine Musterbilder und keine fremden Projekte.",
+    showcase_terms: "Gerne zeigen wir Ihnen den Stand persönlich, sobald das Beispielobjekt fertig ist.",
+    value_kicker: "Für Kaufinteressierte",
+    value_title: "Ein Raum lässt sich nicht in zwölf Bildern erklären.",
+    value_body: "Wie folgen die Zimmer aufeinander? Wo fällt das Licht ein? Wie gross wirkt das Wohnzimmer wirklich? Ein Rundgang beantwortet solche Fragen, auch für Interessierte, die nicht in Zürich wohnen. Der Grundriss liefert die Masse dazu. So kommen zur Besichtigung eher die Menschen, für die das Objekt passt.",
+    services_kicker: "Angebot",
+    services_title: "Ein Besuch vor Ort. Zwei Ergebnisse.",
+    tour_status: "01 · Rundgang",
+    tour_title: "Fotorealistischer Rundgang",
+    tour_body: "Der Rundgang läuft im Browser, ohne App, und Sie erhalten einen Link zum Teilen in Inserat, Exposé und E-Mail.",
+    tour_link: "Pilot kennenlernen",
+    plan_status: "02 · Grundriss",
+    plan_title: "Vermessener Grundriss",
+    plan_body: "Aus derselben Erfassung entsteht ein 2D-Grundriss mit Zimmerflächen, als PDF für die Verkaufsdokumentation.",
+    process_kicker: "Ablauf",
+    process_title: "Ein Besuch vor Ort. Der Rest liegt bei uns.",
+    process_intro: "Im Founding Pilot gehen wir diesen Ablauf gemeinsam mit Ihnen an einem echten Verkaufsobjekt durch.",
+    process_1_title: "Besprechen",
+    process_1_body: "Objekt, Termin und Zustimmung der Eigentümerschaft klären. Wir sagen Ihnen, wie die Räume vorbereitet sein sollten.",
+    process_2_title: "Erfassen",
+    process_2_body: "Wir gehen einmal mit einem Handscanner durch alle Räume. Während der Erfassung sollten keine Personen im Objekt sein.",
+    process_3_title: "Aufbereiten und prüfen",
+    process_3_body: "Rundgang und Grundriss erstellen und vor der Übergabe kontrollieren, auch auf Personen, Dokumente und persönliche Gegenstände.",
+    process_4_title: "Übergeben",
+    process_4_body: "Sie erhalten den Link zum Rundgang und den Grundriss und entscheiden, wo Sie beides einsetzen.",
+    questions_kicker: "Gut zu wissen",
+    questions_title: "Fragen aus der Praxis",
+    q1_title: "Wer muss zustimmen?",
+    q1_body: "Wir erfassen nur mit schriftlicher Zustimmung der Eigentümerschaft. Ein kurzes Formular dafür bringen wir mit.",
+    q3_title: "Wie genau ist der Grundriss?",
+    q3_body: "Der Grundriss beruht auf einer Laservermessung der Räume. Eine Abweichung nennen wir erst, wenn wir sie mit dem Massband nachgemessen haben. Bis dahin gilt: Massangaben ohne Gewähr.",
+    audiences_kicker: "Für wen",
+    audiences_title: "Für alle, die eine Wohnung oder ein Haus im Raum Zürich verkaufen.",
+    audience_1_title: "Maklerinnen und Makler",
+    audience_1_body: "Für Mandate, bei denen Kaufinteressierte die Räume vorab verstehen sollen, etwa weil sie von weiter weg kommen oder weil Grundriss und Lichtverhältnisse den Wert ausmachen.",
+    audience_2_title: "Eigentümerinnen und Eigentümer, die selbst verkaufen",
+    audience_2_body: "Für alle, die ihr Zuhause ohne Agentur verkaufen und Rundgang und Grundriss aus einer Hand möchten.",
+    studio_kicker: "Studio",
+    studio_title: "Gebaut in Zürich, zwischen Raum und Technologie.",
+    studio_location: "Zürich, Schweiz",
+    studio_body: "Manzara verbindet einen ETH-Zürich-Hintergrund in räumlicher Technologie mit einem klaren Blick auf die Immobilienpraxis. Wir beginnen bewusst klein: mit wenigen Objekten, direkter Zusammenarbeit und Ergebnissen, die wir selbst geprüft haben.",
+    pilot_kicker: "Founding Pilot",
+    pilot_title: "Haben Sie ein Objekt, das sich dafür eignet?",
+    pilot_body: "Wir suchen eine erste Agentur im Raum Zürich, mit der wir Rundgang und Grundriss an einem echten Verkaufsobjekt umsetzen. Im Gegenzug wünschen wir uns Ihr offenes Feedback. Konditionen und Termin besprechen wir pro Objekt.",
+    pilot_cta: "Pilot besprechen",
+    footer_line: "Rundgang und Grundriss für Immobilien im Verkauf, aus Zürich.",
+    footer_contact: "Kontakt",
+    footer_location: "Zürich, Schweiz",
+    footer_imprint: "Impressum",
+    footer_privacy: "Datenschutz",
+    footer_language: "English",
+    language_toggle: "EN",
+    language_label: "Switch to English"
   },
   en: {
-    meta_title:"Manzara — Photorealistic 3D property tours | Zürich",
-    meta_desc:"Photorealistic 3D tours of your listings — captured locally in Zürich, online within 48 hours. No subscription, your data.",
-    nav_benefits:"Benefits", nav_how:"Process", nav_pricing:"Pricing", nav_faq:"FAQ", nav_cta:"Request a pilot",
-    hero_eyebrow:"PHOTOREALISTIC 3D TOURS · ZÜRICH",
-    hero_h1:"The most beautiful view of any property.",
-    hero_lead:"We turn your listings into photorealistic 3D walkthroughs — as if the buyer were standing in the room. Captured locally in Zürich, online within 48 hours.",
-    hero_cta1:"Watch demo", hero_cta2:"Request a pilot",
-    trust_1:"Local Zürich studio", trust_2:"Online in 48 hours", trust_3:"No subscription · your data",
-    demo_label:"Demo tour", demo_cap:"Move freely through the space — in real time, right in your browser.",
-    shift_eyebrow:"FIRST IMPRESSIONS", shift_title:"The first impression now happens online.",
-    shift_body:"Buyers decide on screen which properties are even worth a viewing. A stack of photos or a clunky 360° tour doesn't do an exceptional property justice. Manzara shows the space as it truly is — winning attention, pre-qualifying viewings, and selling faster.",
-    how_eyebrow:"PROCESS", how_title:"Four steps to your tour.",
-    how_1_t:"Appointment & scan", how_1_b:"We come to the property and scan it in about an hour — discreet and hassle-free.",
-    how_2_t:"Reconstruction", how_2_b:"Our technology reconstructs the space photorealistically in 3D.",
-    how_3_t:"Hosting & embedding", how_3_b:"You get a hosted, branded tour — as a link and to embed on Homegate, ImmoScout24 or your own website.",
-    how_4_t:"Within 48 hours", how_4_b:"From scan to finished tour takes no more than two days.",
-    incl_eyebrow:"INCLUDED", incl_title:"Everything you need to market the listing.",
-    incl_1:"A photorealistic 3D tour of your property", incl_2:"Hosted & instantly shareable — link and embed",
-    incl_3:"In your branding, with your logo", incl_4:"Optimised for mobile and desktop",
-    incl_5:"No subscription — the tour is yours", incl_6:"A local point of contact in Zürich",
-    why_eyebrow:"WHY MANZARA", why_title:"Beautiful. Local. No compromises.",
-    p1_t:"Photorealistic", p1_b:"State-of-the-art Gaussian-splat technology produces a real, light-filled sense of space — not a sterile 3D model, not warped panoramas.",
-    p2_t:"Local & fast", p2_b:"A team from Zürich, on-site and reachable. Finished tours within 48 hours instead of weeks of waiting.",
-    p3_t:"Your data, no subscription", p3_b:"Hosted without lock-in, in Switzerland on request. No monthly fees — the tour remains your property.",
-    price_eyebrow:"PRICING", price_title:"Transparent. Per property. No subscription.",
-    price_body:"You pay per tour — no subscription, no hidden costs, no lock-in fees. For our first clients we offer pilot terms at an introductory price.",
-    price_btn:"Request a quote for your property",
-    faq_eyebrow:"FAQ", faq_title:"Frequently asked questions.",
-    faq_q1:"What does a tour cost?", faq_a1:"You pay per property, with no subscription. Early clients receive pilot terms — ask us for a concrete quote for your listing.",
-    faq_q2:"Do buyers really need a 3D tour?", faq_a2:"Buyers decide online which properties they'll even view. A photorealistic tour makes your listing stand out and pre-qualifies viewings — fewer time-wasters, more serious interest.",
-    faq_q3:"What about floor plans and measurements?", faq_a3:"The tour is the emotional selling element. We're happy to embed your existing floor plans; to-scale plans straight from the scan are in the works.",
-    faq_q4:"How much work is it for me?", faq_a4:"Minimal. We handle everything: the on-site capture (~1 hr), processing and hosting. You get a finished link to share and embed.",
-    faq_q5:"Where is the data hosted?", faq_a5:"Without lock-in, and in Switzerland on request. The tour is yours and can be deleted at any time.",
-    faq_q6:"Doesn't 3D look strange on windows and mirrors?", faq_a6:"We curate every capture and review every tour before delivery. Your clients only ever see the polished result.",
-    cta_h:"Ready to make your next property shine?", cta_sub:"Founding-customer pilot at an introductory price — limited availability.", cta_btn:"Request a pilot",
-    foot_tagline:"Photorealistic 3D property tours. A local studio from Zürich.",
-    foot_nav_t:"Navigation", foot_contact_t:"Contact", foot_city:"Zürich, Switzerland", foot_imprint:"Imprint", foot_privacy:"Privacy", foot_made:"Crafted with care in Zürich.",
-    _toggle:"DE"
+    meta_title: "Manzara · Tour and floor plan for homes for sale, Zürich",
+    meta_description: "A photoreal browser tour and a measured floor plan from one visit on site. For homes being sold in the Zürich area.",
+    og_title: "Tour and floor plan. From one visit.",
+    og_description: "A photoreal browser tour and a measured floor plan from one visit on site. For homes being sold in the Zürich area.",
+    skip_link: "Skip to content",
+    home_label: "Manzara home",
+    nav_label: "Main navigation",
+    nav_menu: "Menu",
+    nav_offer: "What you get",
+    nav_showcase: "Showcase",
+    nav_process: "How it works",
+    nav_studio: "Studio",
+    nav_pilot: "Discuss a pilot",
+    hero_kicker: "For estate agents · Zürich area",
+    hero_title: "Tour and floor plan. From one visit.",
+    hero_intro: "We capture the home you are selling in one visit on site. From that visit come a photoreal tour that runs in the browser and a measured floor plan with room areas.",
+    hero_cta: "Discuss the founding pilot",
+    hero_note_label: "What buyers see",
+    hero_note: "Understand the sequence of rooms, their proportions and the light before travelling to a viewing.",
+    hero_note_detail: "For homes for sale in the Zürich area.",
+    showcase_visual_label: "Placeholder: the showcase will appear here",
+    showcase_status: "Showcase to follow",
+    showcase_caption: "No tour or floor plan to show yet.",
+    showcase_kicker: "Showcase",
+    showcase_title: "We only show what we have checked.",
+    showcase_body: "We are working on a first showcase home in Zürich. We will publish its tour and floor plan here only once both have passed our review. Until then we show no sample images and no third-party projects.",
+    showcase_terms: "We are happy to show you in person once the showcase is ready.",
+    value_kicker: "For buyers",
+    value_title: "A space cannot be explained in twelve photographs.",
+    value_body: "How do the rooms follow one another? Where does the light come in? How large does the living room really feel? A tour answers these questions, including for buyers who do not live in Zürich. The floor plan adds the measurements. That way, the people who come to a viewing are more likely to be the ones the home suits.",
+    services_kicker: "What you get",
+    services_title: "One visit on site. Two deliverables.",
+    tour_status: "01 · Tour",
+    tour_title: "Photoreal tour",
+    tour_body: "The tour runs in the browser, with no app, and you receive a link to share in listings, brochures and email.",
+    tour_link: "Explore the pilot",
+    plan_status: "02 · Floor plan",
+    plan_title: "Measured floor plan",
+    plan_body: "The same capture produces a 2D floor plan with room areas, as a PDF for the sales documentation.",
+    process_kicker: "How it works",
+    process_title: "One visit on site. We handle the rest.",
+    process_intro: "In the founding pilot we go through this process together with you on a real home for sale.",
+    process_1_title: "Discuss",
+    process_1_body: "Agree the property, the date and the owner's consent. We tell you how the rooms should be prepared.",
+    process_2_title: "Capture",
+    process_2_body: "We walk once through every room with a handheld scanner. Nobody should be in the home during the capture.",
+    process_3_title: "Prepare and review",
+    process_3_body: "Build the tour and floor plan and review them before handover, including for people, documents and personal items.",
+    process_4_title: "Hand over",
+    process_4_body: "You receive the tour link and the floor plan and decide where to use them.",
+    questions_kicker: "Good to know",
+    questions_title: "Practical questions",
+    q1_title: "Who needs to agree?",
+    q1_body: "We only capture with the owner's written consent. We bring a short form for it.",
+    q3_title: "How accurate is the floor plan?",
+    q3_body: "The floor plan is based on a laser measurement of the rooms. We will state a margin only once we have checked it with a tape measure. Until then, measurements are given without warranty.",
+    audiences_kicker: "Who it is for",
+    audiences_title: "For anyone selling a flat or a house in the Zürich area.",
+    audience_1_title: "Estate agents",
+    audience_1_body: "For mandates where buyers should understand the rooms in advance, for example because they live further away or because layout and light define the property.",
+    audience_2_title: "Owners selling their own home",
+    audience_2_body: "For people selling their home without an agency who want the tour and the floor plan from one source.",
+    studio_kicker: "Studio",
+    studio_title: "Built in Zürich, between space and technology.",
+    studio_location: "Zürich, Switzerland",
+    studio_body: "Manzara combines an ETH Zürich background in spatial technology with a clear view of real-estate practice. We are starting deliberately small: a few properties, direct collaboration and results we have checked ourselves.",
+    pilot_kicker: "Founding pilot",
+    pilot_title: "Do you have a property that suits this?",
+    pilot_body: "We are looking for a first agency in the Zürich area to produce a tour and floor plan with us for a real home for sale. In return we ask for your honest feedback. Terms and timing are agreed per property.",
+    pilot_cta: "Discuss a pilot",
+    footer_line: "Tours and floor plans for homes for sale, from Zürich.",
+    footer_contact: "Contact",
+    footer_location: "Zürich, Switzerland",
+    footer_imprint: "Imprint",
+    footer_privacy: "Privacy",
+    footer_language: "Deutsch",
+    language_toggle: "DE",
+    language_label: "Auf Deutsch wechseln"
   }
 };
 
-function applyLang(lang){
-  const d = I18N[lang] || I18N.de;
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach((el)=>{
-    const k = el.getAttribute("data-i18n");
-    if(!(k in d)) return;
-    if(el.tagName === "TITLE") document.title = d[k];
-    else if(el.tagName === "META") el.setAttribute("content", d[k]);
-    else el.textContent = d[k];
+function applyLang(lang) {
+  const nextLang = Object.hasOwn(I18N, lang) ? lang : "de";
+  const dictionary = I18N[nextLang];
+
+  document.documentElement.lang = nextLang;
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    if (!Object.hasOwn(dictionary, key)) return;
+
+    if (element.tagName === "TITLE") {
+      document.title = dictionary[key];
+      element.textContent = dictionary[key];
+    } else if (element.tagName === "META") {
+      element.setAttribute("content", dictionary[key]);
+    } else {
+      element.textContent = dictionary[key];
+    }
   });
-  const t = document.getElementById("lang-toggle");
-  if(t) t.textContent = d._toggle;
-  try{ localStorage.setItem("manzara_lang", lang); }catch(e){}
+
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-aria-label");
+    if (Object.hasOwn(dictionary, key)) element.setAttribute("aria-label", dictionary[key]);
+  });
+
+  const toggle = document.getElementById("lang-toggle");
+  if (toggle) {
+    toggle.textContent = dictionary.language_toggle;
+    toggle.setAttribute("aria-label", dictionary.language_label);
+  }
+
+  try {
+    localStorage.setItem("manzara_lang", nextLang);
+  } catch (_) {
+    // Language still works when storage is unavailable.
+  }
 }
 
-document.addEventListener("DOMContentLoaded", ()=>{
-  let lang = "de";
-  try{ lang = localStorage.getItem("manzara_lang") || "de"; }catch(e){}
-  if(!I18N[lang]) lang = "de";
-  applyLang(lang);
+function initMobileNav() {
+  document.querySelectorAll(".mobile-nav").forEach((menu) => {
+    const summary = menu.querySelector("summary");
+    // Close after choosing a destination so the panel never covers the target section.
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => { menu.open = false; });
+    });
+    menu.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape" || !menu.open) return;
+      menu.open = false;
+      summary?.focus?.();
+    });
+  });
+}
 
-  const t = document.getElementById("lang-toggle");
-  if(t) t.addEventListener("click", ()=> applyLang(document.documentElement.lang === "de" ? "en" : "de"));
-
-  // sticky-nav shadow
-  const nav = document.getElementById("nav");
-  const onScroll = ()=>{ if(nav) nav.classList.toggle("scrolled", window.scrollY > 8); };
-  onScroll(); window.addEventListener("scroll", onScroll, {passive:true});
-
-  // scroll reveal
-  const els = document.querySelectorAll(".reveal");
-  if("IntersectionObserver" in window){
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach((e)=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
-    }, {threshold:0.12, rootMargin:"0px 0px -40px 0px"});
-    els.forEach((el)=> io.observe(el));
-  } else {
-    els.forEach((el)=> el.classList.add("in"));
+function initSite() {
+  let savedLang = "de";
+  try {
+    savedLang = localStorage.getItem("manzara_lang") || "de";
+  } catch (_) {
+    // Keep the meaningful German HTML when storage is unavailable.
   }
-});
+  applyLang(savedLang);
+
+  const toggle = document.getElementById("lang-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      applyLang(document.documentElement.lang === "de" ? "en" : "de");
+    });
+  }
+
+  document.querySelectorAll("[data-language-trigger]").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      applyLang(document.documentElement.lang === "de" ? "en" : "de");
+      document.getElementById("top")?.focus?.();
+    });
+  });
+
+  initMobileNav();
+
+  const reveals = document.querySelectorAll(".reveal");
+  if (document.body && "IntersectionObserver" in globalThis) {
+    document.body.classList.add("motion-ready");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -8%", threshold: 0.08 });
+    reveals.forEach((element) => observer.observe(element));
+  } else {
+    reveals.forEach((element) => element.classList.add("is-visible"));
+  }
+}
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { I18N, applyLang, initSite, initMobileNav };
+} else if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initSite, { once: true });
+} else {
+  initSite();
+}

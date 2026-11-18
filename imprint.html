@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impressum / Imprint - Manzara</title>
+  <meta name="description" content="Konfigurierbarer Impressumsentwurf für Manzara. Nicht zur Veröffentlichung freigegeben.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="legal-page">
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./index.html" aria-label="Manzara Startseite"><img src="./assets/manzara-wordmark-charcoal.svg" width="150" height="21" alt="Manzara"></a>
+      <nav class="site-nav" aria-label="Seitennavigation"><a href="./index.html">Startseite / Home</a><a href="./privacy.html">Datenschutz / Privacy</a></nav>
+    </div>
+  </header>
+  <main class="shell legal-main">
+    <p class="kicker">Rechtliche Angaben / Legal details</p>
+    <h1 class="legal-heading">Impressum / Imprint</h1>
+    <aside class="publication-warning" role="note">
+      <strong>NICHT VERÖFFENTLICHEN / DO NOT PUBLISH</strong>
+      Diese Seite ist ein konfigurierbarer Prototyp. Betreibername, Rechtsform, Postadresse, Hosting-Anbieter und öffentliche URL sind noch nicht bestätigt. / This page is a configurable prototype. Operator name, legal entity, postal address, hosting provider and public URL are not yet confirmed.
+    </aside>
+    <section class="legal-language" lang="de" aria-labelledby="imprint-de">
+      <h2 id="imprint-de">Deutsch</h2>
+      <h3>Verantwortliche Stelle</h3>
+      <p>Vikram Iyer<br><span class="config-value">{{LEGAL_ENTITY}}</span><br>Hegibachstrasse 34b<br>8032 Zürich <!-- postcode to confirm --><br>Schweiz / Switzerland</p>
+      <h3>Kontakt</h3>
+      <p>E-Mail: <a href="mailto:hallo@manzara.ch">hallo@manzara.ch</a><br>Website: <span class="config-value">{{PUBLIC_URL}}</span></p>
+      <h3>Technische Veröffentlichung</h3>
+      <p>Hosting-Anbieter: <span class="config-value">{{HOSTING_PROVIDER}}</span></p>
+      <h3>Checkliste vor der Veröffentlichung</h3>
+      <ul><li>Betreibername und Rechtsform verifizieren.</li><li>Vollständige zustellfähige Postadresse einsetzen.</li><li>Hosting-Anbieter und öffentliche URL bestätigen.</li><li>Rechtliche Prüfung für die tatsächliche Veröffentlichung durchführen.</li></ul>
+    </section>
+    <section class="legal-language" lang="en" aria-labelledby="imprint-en">
+      <h2 id="imprint-en">English</h2>
+      <h3>Responsible operator</h3>
+      <p>Vikram Iyer<br><span class="config-value">{{LEGAL_ENTITY}}</span><br>Hegibachstrasse 34b<br>8032 Zürich <!-- postcode to confirm --><br>Schweiz / Switzerland</p>
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:hallo@manzara.ch">hallo@manzara.ch</a><br>Website: <span class="config-value">{{PUBLIC_URL}}</span></p>
+      <h3>Technical publication</h3>
+      <p>Hosting provider: <span class="config-value">{{HOSTING_PROVIDER}}</span></p>
+      <h3>Pre-publication checklist</h3>
+      <ul><li>Verify the operator name and legal entity.</li><li>Insert the complete serviceable postal address.</li><li>Confirm the hosting provider and public URL.</li><li>Complete legal review for the actual publication.</li></ul>
+    </section>
+  </main>
+</body>
+</html>

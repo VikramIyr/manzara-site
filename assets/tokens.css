@@ -1,0 +1,171 @@
+/*
+ * Manzara design tokens. Canonical source (v2, November 2026).
+ * Approved by the CEO on 17.11.2026: brand/proposals/2026-11-brand-refinement.md (D1-D5; D6 deferred).
+ * tokens.json mirrors this file for non-CSS systems.
+ *
+ * Three layers:
+ *   1. Palette   the named brand colours (what they are). Every v1 --color-* name still works.
+ *   2. Roles     what a colour is for. New component CSS uses roles, not palette names.
+ *   3. Scales    type, space, grid, radius, line, shadow, motion.
+ * Contrast ratios are WCAG 2.x, computed from these hex values (not measured on screens).
+ *
+ * Usage rules that a token cannot enforce:
+ *   - Clay stays visible as a warm accent: at most ONE Clay element (fill, rule or tick) per surface.
+ *   - At most ONE measurement line (dimension-line motif) per surface, and it never carries an invented number.
+ *   - Clay (#A96045) is never small text. Use --text-accent (Clay-ink) for links, labels and focus.
+ *   - Stone and Line are never text colours.
+ */
+
+:root {
+  /* ---------- 1. Palette ---------- */
+  --color-limestone: #F1EDE4;   /* page field */
+  --color-paper: #FAF8F3;       /* panels, documents */
+  --color-charcoal: #20221F;    /* ink; 13.72 on Limestone, 15.10 on Paper */
+  --color-clay: #A96045;        /* brand accent: logo, fills, rules, large display only (4.04 / 4.45 = graphics or large text) */
+  --color-moss: #5E685E;        /* v2 (was #667066): muted text 4.97 on Limestone, 5.47 on Paper; Paper on Moss 5.47 */
+  --color-stone: #91867A;       /* non-text only: control borders and graphics (3.05 / 3.36) */
+  --color-line: #D9D2C7;        /* decorative dividers only (1.28 / 1.41) */
+
+  --color-clay-ink: #96523A;        /* Clay for small text, links, focus on light surfaces: 5.04 / 5.55 */
+  --color-clay-light: #CF8B6F;      /* Clay on dark surfaces: 5.78 on Charcoal, 5.02 on Charcoal-raised */
+  --color-charcoal-raised: #2B2D29; /* raised panel on Charcoal; Limestone text 11.90 */
+  --color-charcoal-line: #3D3F3A;   /* decorative divider on Charcoal */
+  --color-stone-dark: #7D776E;      /* control borders on Charcoal (3.62) and Charcoal-raised (3.14) */
+  --color-stone-light: #ADA397;     /* muted text on Charcoal (6.46) and Charcoal-raised (5.60) */
+
+  /* Status: always with an icon and words, never colour alone. Error is crimson so it never reads as Clay. */
+  --color-success: #3E6B4F;       /* 5.25 / 5.78 */
+  --color-warning: #7A5A12;       /* 5.45 / 6.00 */
+  --color-error: #9E3328;         /* 6.08 / 6.69 */
+  --color-success-light: #8DB89A; /* on Charcoal 7.22 */
+  --color-warning-light: #D7B45E; /* on Charcoal 8.08 */
+  --color-error-light: #E8968A;   /* on Charcoal 6.99 */
+
+  /* Deliverables placed inside an agency's listing (floor plans, portal PNGs) use a neutral white field. */
+  --color-plan-white: #FFFFFF;
+
+  /* ---------- 2. Roles (light, default) ---------- */
+  --surface-page: var(--color-limestone);
+  --surface-panel: var(--color-paper);
+  --surface-inverse: var(--color-charcoal);
+  --surface-accent: var(--color-moss);
+  --surface-overlay: color-mix(in srgb, var(--color-paper) 92%, transparent); /* UI over the 3D scene */
+  --surface-deliverable: var(--color-plan-white);
+
+  --text-primary: var(--color-charcoal);
+  --text-muted: var(--color-moss);
+  --text-accent: var(--color-clay-ink);
+  --text-on-inverse: var(--color-limestone);
+  --text-on-accent: var(--color-paper);
+  --text-on-action: var(--color-paper);
+
+  --action-primary: var(--color-charcoal);
+  --action-primary-hover: var(--color-moss);
+  --action-accent: var(--color-clay);          /* large fills only: Paper text on Clay needs 24 px, or 18.66 px at 600 */
+
+  --border-subtle: var(--color-line);          /* decorative; never the only edge of an input */
+  --border-control: var(--color-stone);        /* inputs, toggles (WCAG 1.4.11) */
+  --border-strong: var(--color-charcoal);
+
+  --focus-ring: var(--color-clay-ink);
+  --focus-ring-on-dark: var(--color-paper);    /* on Charcoal and Moss sections (Clay on Moss is 1.09) */
+  --focus-ring-width: 0.1875rem;
+  --focus-ring-offset: 0.1875rem;
+  --focus-ring-scene: 0 0 0 0.125rem var(--color-paper), 0 0 0 0.3125rem var(--color-clay-ink); /* over the 3D scene */
+
+  --status-success: var(--color-success);
+  --status-warning: var(--color-warning);
+  --status-error: var(--color-error);
+
+  /* ---------- 3a. Type ---------- */
+  --font-display: "Newsreader", Georgia, serif;
+  --font-interface: "Manrope", Arial, system-ui, sans-serif;
+
+  --text-xs: 0.75rem;     /* 12 px floor: kickers, captions, legal */
+  --text-sm: 0.875rem;    /* 14 px: buttons, nav, metadata, viewer labels */
+  --text-md: 1rem;        /* 16 px: body, inputs (no iOS zoom) */
+  --text-lg: 1.25rem;     /* 20 px: lead paragraphs */
+  --display-sm: 1.75rem;  /* 28 px: card titles, viewer room name */
+  --display-md: clamp(2rem, 3.5vw, 3rem);
+  --display-lg: clamp(2.5rem, 5.5vw, 5rem);
+  --display-xl: clamp(3.35rem, 8vw, 7.75rem);
+  /* D6 (Newsreader opsz 72 display cut) is deferred until the tours-first homepage headline exists. */
+
+  --leading-display: 1;
+  --leading-ui: 1.35;
+  --leading-body: 1.6;
+  --tracking-display: -0.025em;
+  --tracking-kicker: 0.14em;
+  --measure-body: 65ch;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* Prices, areas, dimensions, dates and tables: tabular lining figures. */
+  --numeric-figures: tabular-nums lining-nums;
+
+  /* ---------- 3b. Space (4 px base) ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-section: clamp(5rem, 10vw, 9rem);
+
+  /* ---------- 3c. Grid ---------- */
+  --grid-columns: 12;
+  --grid-gutter: clamp(1rem, 2vw, 1.5rem);
+  --page-gutter: clamp(1rem, 4vw, 4rem);  /* phone floor 16 px */
+  --content-width: 82rem;
+
+  /* ---------- 3d. Radius, line, shadow, motion ---------- */
+  --radius-sm: 0.25rem;   /* buttons, inputs, chips */
+  --radius-md: 0.375rem;  /* panels, cards, viewer sheets */
+  --radius-full: 999px;   /* round icon buttons only */
+  --line-hairline: 0.0625rem;
+  --line-rule: 0.125rem;
+  --shadow-overlay: 0 0.5rem 2rem color-mix(in srgb, var(--color-charcoal) 10%, transparent);
+  --shadow-raised: 0 0.75rem 2rem color-mix(in srgb, var(--color-charcoal) 15%, transparent);
+  --duration-fast: 180ms;
+  --duration-medium: 280ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* ---------- Dark scheme: opt-in only ----------
+ * Apply data-theme="dark" or .theme-dark to a container (viewer chrome over a dark scene,
+ * dark website sections, slides). Deliberately NOT wired to prefers-color-scheme.
+ */
+[data-theme="dark"],
+.theme-dark {
+  --surface-page: var(--color-charcoal);
+  --surface-panel: var(--color-charcoal-raised);
+  --surface-inverse: var(--color-limestone);
+  --surface-overlay: color-mix(in srgb, var(--color-charcoal) 88%, transparent);
+
+  --text-primary: var(--color-limestone);
+  --text-muted: var(--color-stone-light);
+  --text-accent: var(--color-clay-light);
+  --text-on-inverse: var(--color-charcoal);
+  --text-on-action: var(--color-charcoal);
+
+  --action-primary: var(--color-limestone);
+  --action-primary-hover: var(--color-paper);
+
+  --border-subtle: var(--color-charcoal-line);
+  --border-control: var(--color-stone-dark);
+  --border-strong: var(--color-limestone);
+
+  --focus-ring: var(--color-clay-light);
+  --status-success: var(--color-success-light);
+  --status-warning: var(--color-warning-light);
+  --status-error: var(--color-error-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0ms; --duration-medium: 0ms; }
+}

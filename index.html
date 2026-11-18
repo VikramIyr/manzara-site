@@ -1,204 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="meta_title">Manzara — Fotorealistische 3D-Immobilien-Rundgänge | Zürich</title>
-  <meta name="description" data-i18n="meta_desc" content="Fotorealistische 3D-Rundgänge Ihrer Immobilien — lokal in Zürich aufgenommen, innert 48 Stunden online. Kein Abo, Ihre Daten." />
-  <meta property="og:title" content="Manzara — Fotorealistische 3D-Immobilien-Rundgänge" />
-  <meta property="og:description" content="Als stünde der Interessent mitten im Raum. Lokal in Zürich, online in 48 Stunden." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='8' width='20' height='16' rx='2' fill='none' stroke='%23211C16' stroke-width='2'/%3E%3Cline x1='6' y1='18' x2='26' y2='18' stroke='%23B26749' stroke-width='2'/%3E%3C/svg%3E" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta_title">Manzara · Rundgang und Grundriss für Immobilien im Verkauf, Zürich</title>
+  <meta name="description" data-i18n="meta_description" content="Ein fotorealistischer Rundgang im Browser und ein vermessener Grundriss, aus einem Besuch vor Ort. Für Immobilien im Verkauf im Raum Zürich.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Manzara">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:title" data-i18n="og_title" content="Rundgang und Grundriss. Aus einem Besuch.">
+  <meta property="og:description" data-i18n="og_description" content="Ein fotorealistischer Rundgang im Browser und ein vermessener Grundriss, aus einem Besuch vor Ort. Für Immobilien im Verkauf im Raum Zürich.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" data-i18n="og_title" content="Rundgang und Grundriss. Aus einem Besuch.">
+  <meta name="theme-color" content="#F1EDE4">
+  <link rel="icon" href="./assets/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="container nav-inner">
-      <a href="#top" class="wordmark">manzara</a>
-      <nav class="nav-links">
-        <a href="#why" data-i18n="nav_benefits">Vorteile</a>
-        <a href="#how" data-i18n="nav_how">Ablauf</a>
-        <a href="#pricing" data-i18n="nav_pricing">Preise</a>
-        <a href="#faq" data-i18n="nav_faq">FAQ</a>
-        <button id="lang-toggle" class="lang-toggle" aria-label="Language">EN</button>
-        <a href="#contact" class="btn btn-dark" data-i18n="nav_cta">Pilot anfragen</a>
+  <a class="skip-link" href="#content" data-i18n="skip_link">Zum Inhalt springen</a>
+
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Manzara Startseite" data-i18n-aria-label="home_label">
+        <img src="./assets/manzara-wordmark-charcoal.svg" width="150" height="21" alt="Manzara">
+      </a>
+      <details class="mobile-nav">
+        <summary data-i18n="nav_menu">Menü</summary>
+        <nav class="mobile-nav-panel" aria-label="Hauptnavigation" data-i18n-aria-label="nav_label">
+          <a href="#services" data-i18n="nav_offer">Angebot</a>
+          <a href="#showcase" data-i18n="nav_showcase">Beispielobjekt</a>
+          <a href="#process" data-i18n="nav_process">Ablauf</a>
+          <a href="#studio" data-i18n="nav_studio">Studio</a>
+          <a href="#pilot" data-i18n="nav_pilot">Pilot besprechen</a>
+        </nav>
+      </details>
+      <nav class="site-nav" aria-label="Hauptnavigation" data-i18n-aria-label="nav_label">
+        <a href="#services" data-i18n="nav_offer">Angebot</a>
+        <a href="#showcase" data-i18n="nav_showcase">Beispielobjekt</a>
+        <a href="#process" data-i18n="nav_process">Ablauf</a>
+        <a href="#studio" data-i18n="nav_studio">Studio</a>
+        <button class="language-switch" id="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+        <a class="text-link header-cta" href="#pilot" data-i18n="nav_pilot">Pilot besprechen</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner reveal">
-        <p class="eyebrow" data-i18n="hero_eyebrow">FOTOREALISTISCHE 3D-RUNDGÄNGE · ZÜRICH</p>
-        <h1 data-i18n="hero_h1">Die schönste Aussicht auf jede Immobilie.</h1>
-        <p class="lead" data-i18n="hero_lead">Wir verwandeln Ihre Objekte in fotorealistische 3D-Rundgänge — als stünde der Interessent mitten im Raum. Lokal in Zürich aufgenommen, innert 48 Stunden online.</p>
-        <div class="cta-row">
-          <a href="#demo" class="btn btn-primary" data-i18n="hero_cta1">Demo ansehen</a>
-          <a href="#contact" class="btn btn-outline" data-i18n="hero_cta2">Pilot anfragen</a>
+  <main id="content">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="kicker" data-i18n="hero_kicker">Für Maklerinnen und Makler · Raum Zürich</p>
+          <h1 id="hero-title" data-i18n="hero_title">Rundgang und Grundriss. Aus einem Besuch.</h1>
+          <p class="hero-intro" data-i18n="hero_intro">Wir erfassen Ihr Verkaufsobjekt einmal vor Ort. Daraus entstehen ein fotorealistischer Rundgang, der im Browser läuft, und ein vermessener Grundriss mit Zimmerflächen.</p>
+          <a class="button button-primary" href="mailto:hallo@manzara.ch?subject=Manzara%20Tour%20Pilot" data-i18n="hero_cta">Founding Pilot besprechen</a>
         </div>
-        <ul class="trust-row">
-          <li data-i18n="trust_1">Lokales Zürcher Studio</li>
-          <li data-i18n="trust_2">Online in 48 Stunden</li>
-          <li data-i18n="trust_3">Kein Abo · Ihre Daten</li>
-        </ul>
+        <aside class="hero-note reveal" aria-label="Was Kaufinteressierte sehen" data-i18n-aria-label="hero_note_label">
+          <p class="note-quote" data-i18n="hero_note">Abfolge, Proportionen und Licht verstehen, bevor man zur Besichtigung fährt.</p>
+          <p class="note-detail" data-i18n="hero_note_detail">Für Wohneigentum im Verkauf im Raum Zürich.</p>
+        </aside>
       </div>
     </section>
 
-    <!-- DEMO -->
-    <section class="demo" id="demo">
-      <div class="container reveal">
-        <div class="media-frame">
-          <!-- REPLACE with the real tour: <iframe src="https://your-tour" allowfullscreen></iframe> -->
-          <div class="media-glow"></div>
-          <button class="play-btn" aria-label="Demo"><span></span></button>
-          <p class="media-label" data-i18n="demo_label">Demo-Rundgang</p>
-          <p class="media-cap" data-i18n="demo_cap">Bewegen Sie sich frei durch den Raum — in Echtzeit, direkt im Browser.</p>
+    <section class="showcase section-shell" id="showcase" aria-labelledby="showcase-title">
+      <div class="shell property-grid">
+        <div class="property-holding reveal" role="img" aria-label="Platzhalter: hier erscheint das Beispielobjekt" data-i18n-aria-label="showcase_visual_label">
+          <div class="holding-geometry" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <p class="holding-status" aria-hidden="true" data-i18n="showcase_status">Beispielobjekt folgt</p>
+          <p class="holding-caption" aria-hidden="true" data-i18n="showcase_caption">Noch kein Rundgang und kein Grundriss zu sehen.</p>
+        </div>
+        <div class="property-copy reveal">
+          <p class="kicker" data-i18n="showcase_kicker">Beispielobjekt</p>
+          <h2 id="showcase-title" data-i18n="showcase_title">Wir zeigen erst, was wir geprüft haben.</h2>
+          <p data-i18n="showcase_body">Wir arbeiten an einem ersten Beispielobjekt in Zürich. Wir veröffentlichen Rundgang und Grundriss hier erst, wenn beide unsere Prüfung bestanden haben. Bis dahin zeigen wir keine Musterbilder und keine fremden Projekte.</p>
+          <p class="property-small" data-i18n="showcase_terms">Gerne zeigen wir Ihnen den Stand persönlich, sobald das Beispielobjekt fertig ist.</p>
         </div>
       </div>
     </section>
 
-    <!-- THE SHIFT -->
-    <section class="shift">
-      <div class="container narrow reveal">
-        <p class="eyebrow" data-i18n="shift_eyebrow">DER ERSTE EINDRUCK</p>
-        <h2 class="display" data-i18n="shift_title">Der erste Eindruck entsteht heute online.</h2>
-        <p class="prose" data-i18n="shift_body">Kaufinteressenten entscheiden zuerst am Bildschirm, welche Objekte überhaupt eine Besichtigung wert sind. Eine Bilderstrecke oder ein klobiger 360°-Rundgang wird einer aussergewöhnlichen Immobilie nicht gerecht. Manzara zeigt den Raum, wie er wirklich ist — und gewinnt so Aufmerksamkeit, qualifiziert Besichtigungen vor und verkauft schneller.</p>
+    <section class="spatial-value section-shell" aria-labelledby="value-title">
+      <div class="shell value-grid reveal">
+        <div>
+          <p class="kicker" data-i18n="value_kicker">Für Kaufinteressierte</p>
+          <h2 id="value-title" data-i18n="value_title">Ein Raum lässt sich nicht in zwölf Bildern erklären.</h2>
+        </div>
+        <p class="value-body" data-i18n="value_body">Wie folgen die Zimmer aufeinander? Wo fällt das Licht ein? Wie gross wirkt das Wohnzimmer wirklich? Ein Rundgang beantwortet solche Fragen, auch für Interessierte, die nicht in Zürich wohnen. Der Grundriss liefert die Masse dazu. So kommen zur Besichtigung eher die Menschen, für die das Objekt passt.</p>
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="how" id="how">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="how_eyebrow">ABLAUF</p>
-          <h2 class="display" data-i18n="how_title">In vier Schritten zum Rundgang.</h2>
+    <section class="services section-shell" id="services" aria-labelledby="services-title">
+      <div class="shell">
+        <header class="section-heading reveal">
+          <p class="kicker" data-i18n="services_kicker">Angebot</p>
+          <h2 id="services-title" data-i18n="services_title">Ein Besuch vor Ort. Zwei Ergebnisse.</h2>
+        </header>
+        <div class="service-list reveal">
+          <article class="service-row">
+            <div class="service-meta">
+              <span class="status-label" data-i18n="tour_status">01 · Rundgang</span>
+            </div>
+            <div class="service-copy">
+              <h3 data-i18n="tour_title">Fotorealistischer Rundgang</h3>
+              <p data-i18n="tour_body">Der Rundgang läuft im Browser, ohne App, und Sie erhalten einen Link zum Teilen in Inserat, Exposé und E-Mail.</p>
+              <a class="text-link" href="#pilot" data-i18n="tour_link">Pilot kennenlernen</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-meta">
+              <span class="status-label" data-i18n="plan_status">02 · Grundriss</span>
+            </div>
+            <div class="service-copy">
+              <h3 data-i18n="plan_title">Vermessener Grundriss</h3>
+              <p data-i18n="plan_body">Aus derselben Erfassung entsteht ein 2D-Grundriss mit Zimmerflächen, als PDF für die Verkaufsdokumentation.</p>
+            </div>
+          </article>
         </div>
-        <ol class="steps reveal">
-          <li><span class="step-n">01</span><strong data-i18n="how_1_t">Termin &amp; Scan</strong><p data-i18n="how_1_b">Wir kommen zu Ihnen ins Objekt und scannen es in rund einer Stunde — diskret und unkompliziert.</p></li>
-          <li><span class="step-n">02</span><strong data-i18n="how_2_t">Rekonstruktion</strong><p data-i18n="how_2_b">Unsere Technologie rekonstruiert den Raum fotorealistisch in 3D.</p></li>
-          <li><span class="step-n">03</span><strong data-i18n="how_3_t">Hosting &amp; Einbettung</strong><p data-i18n="how_3_b">Sie erhalten einen gehosteten, gebrandeten Rundgang — als Link und zum Einbetten auf Homegate, ImmoScout24 oder Ihrer Website.</p></li>
-          <li><span class="step-n">04</span><strong data-i18n="how_4_t">Innert 48 Stunden</strong><p data-i18n="how_4_b">Vom Scan bis zum fertigen Rundgang vergehen maximal zwei Tage.</p></li>
+      </div>
+    </section>
+
+    <section class="process section-shell" id="process" aria-labelledby="process-title">
+      <div class="shell process-grid">
+        <header class="section-heading reveal">
+          <p class="kicker" data-i18n="process_kicker">Ablauf</p>
+          <h2 id="process-title" data-i18n="process_title">Ein Besuch vor Ort. Der Rest liegt bei uns.</h2>
+          <p data-i18n="process_intro">Im Founding Pilot gehen wir diesen Ablauf gemeinsam mit Ihnen an einem echten Verkaufsobjekt durch.</p>
+        </header>
+        <ol class="process-list reveal">
+          <li><span>01</span><div><h3 data-i18n="process_1_title">Besprechen</h3><p data-i18n="process_1_body">Objekt, Termin und Zustimmung der Eigentümerschaft klären. Wir sagen Ihnen, wie die Räume vorbereitet sein sollten.</p></div></li>
+          <li><span>02</span><div><h3 data-i18n="process_2_title">Erfassen</h3><p data-i18n="process_2_body">Wir gehen einmal mit einem Handscanner durch alle Räume. Während der Erfassung sollten keine Personen im Objekt sein.</p></div></li>
+          <li><span>03</span><div><h3 data-i18n="process_3_title">Aufbereiten und prüfen</h3><p data-i18n="process_3_body">Rundgang und Grundriss erstellen und vor der Übergabe kontrollieren, auch auf Personen, Dokumente und persönliche Gegenstände.</p></div></li>
+          <li><span>04</span><div><h3 data-i18n="process_4_title">Übergeben</h3><p data-i18n="process_4_body">Sie erhalten den Link zum Rundgang und den Grundriss und entscheiden, wo Sie beides einsetzen.</p></div></li>
         </ol>
       </div>
     </section>
 
-    <!-- INCLUDED -->
-    <section class="included">
-      <div class="container reveal">
-        <div class="section-head">
-          <p class="eyebrow" data-i18n="incl_eyebrow">INBEGRIFFEN</p>
-          <h2 class="display" data-i18n="incl_title">Alles, was Sie zum Vermarkten brauchen.</h2>
-        </div>
-        <ul class="checklist">
-          <li data-i18n="incl_1">Fotorealistischer 3D-Rundgang Ihres Objekts</li>
-          <li data-i18n="incl_2">Gehostet &amp; sofort teilbar — Link und Einbettung</li>
-          <li data-i18n="incl_3">In Ihrem Branding, mit Ihrem Logo</li>
-          <li data-i18n="incl_4">Optimiert für Mobile und Desktop</li>
-          <li data-i18n="incl_5">Keine Abo-Bindung — der Rundgang gehört Ihnen</li>
-          <li data-i18n="incl_6">Lokaler Ansprechpartner in Zürich</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- WHY -->
-    <section class="why" id="why">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="why_eyebrow">WARUM MANZARA</p>
-          <h2 class="display" data-i18n="why_title">Schön. Lokal. Ohne Kompromisse.</h2>
-        </div>
-        <div class="card-grid reveal">
-          <article class="card">
-            <span class="dot"></span>
-            <h3 data-i18n="p1_t">Fotorealistisch</h3>
-            <p data-i18n="p1_b">Modernste Gaussian-Splat-Technologie erzeugt einen echten, lichtdurchfluteten Raumeindruck — kein steriles 3D-Modell, keine verzerrten Panoramen.</p>
+    <section class="questions section-shell" id="questions" aria-labelledby="questions-title">
+      <div class="shell">
+        <header class="section-heading reveal">
+          <p class="kicker" data-i18n="questions_kicker">Gut zu wissen</p>
+          <h2 id="questions-title" data-i18n="questions_title">Fragen aus der Praxis</h2>
+        </header>
+        <div class="question-list reveal">
+          <article>
+            <h3 data-i18n="q1_title">Wer muss zustimmen?</h3>
+            <p data-i18n="q1_body">Wir erfassen nur mit schriftlicher Zustimmung der Eigentümerschaft. Ein kurzes Formular dafür bringen wir mit.</p>
           </article>
-          <article class="card">
-            <span class="dot"></span>
-            <h3 data-i18n="p2_t">Lokal &amp; schnell</h3>
-            <p data-i18n="p2_b">Ein Team aus Zürich, vor Ort und ansprechbar. Fertige Rundgänge innert 48 Stunden statt wochenlangem Warten.</p>
-          </article>
-          <article class="card">
-            <span class="dot"></span>
-            <h3 data-i18n="p3_t">Ihre Daten, kein Abo</h3>
-            <p data-i18n="p3_b">Gehostet ohne Lock-in, auf Wunsch in der Schweiz. Keine monatlichen Gebühren — der Rundgang bleibt Ihr Eigentum.</p>
+          <article>
+            <h3 data-i18n="q3_title">Wie genau ist der Grundriss?</h3>
+            <p data-i18n="q3_body">Der Grundriss beruht auf einer Laservermessung der Räume. Eine Abweichung nennen wir erst, wenn wir sie mit dem Massband nachgemessen haben. Bis dahin gilt: Massangaben ohne Gewähr.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PRICING -->
-    <section class="pricing" id="pricing">
-      <div class="container narrow reveal">
-        <div class="price-panel">
-          <p class="eyebrow" data-i18n="price_eyebrow">PREISE</p>
-          <h2 class="display" data-i18n="price_title">Transparent. Pro Objekt. Kein Abo.</h2>
-          <p class="prose" data-i18n="price_body">Sie zahlen pro Rundgang — kein Abonnement, keine versteckten Kosten, keine Lock-in-Gebühren. Für unsere ersten Kundinnen und Kunden bieten wir Pilot-Konditionen zum Einführungspreis.</p>
-          <a href="#contact" class="btn btn-primary" data-i18n="price_btn">Angebot für Ihr Objekt anfragen</a>
+    <section class="audiences section-shell" aria-labelledby="audiences-title">
+      <div class="shell">
+        <header class="audience-heading reveal">
+          <p class="kicker" data-i18n="audiences_kicker">Für wen</p>
+          <h2 id="audiences-title" data-i18n="audiences_title">Für alle, die eine Wohnung oder ein Haus im Raum Zürich verkaufen.</h2>
+        </header>
+        <div class="audience-grid reveal">
+          <article>
+            <p class="audience-index" aria-hidden="true">A</p>
+            <h3 data-i18n="audience_1_title">Maklerinnen und Makler</h3>
+            <p data-i18n="audience_1_body">Für Mandate, bei denen Kaufinteressierte die Räume vorab verstehen sollen, etwa weil sie von weiter weg kommen oder weil Grundriss und Lichtverhältnisse den Wert ausmachen.</p>
+          </article>
+          <article>
+            <p class="audience-index" aria-hidden="true">B</p>
+            <h3 data-i18n="audience_2_title">Eigentümerinnen und Eigentümer, die selbst verkaufen</h3>
+            <p data-i18n="audience_2_body">Für alle, die ihr Zuhause ohne Agentur verkaufen und Rundgang und Grundriss aus einer Hand möchten.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-      <div class="container narrow">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="faq_eyebrow">FAQ</p>
-          <h2 class="display" data-i18n="faq_title">Häufige Fragen.</h2>
-        </div>
-        <div class="faq-list reveal">
-          <details class="faq-item"><summary data-i18n="faq_q1">Was kostet ein Rundgang?</summary><p data-i18n="faq_a1">Sie zahlen pro Objekt, ohne Abo. Erstkundinnen und -kunden erhalten Pilot-Konditionen — fragen Sie uns für ein konkretes Angebot zu Ihrem Objekt.</p></details>
-          <details class="faq-item"><summary data-i18n="faq_q2">Brauchen Käufer wirklich einen 3D-Rundgang?</summary><p data-i18n="faq_a2">Interessenten entscheiden online, welche Objekte sie überhaupt besichtigen. Ein fotorealistischer Rundgang hebt Ihr Inserat hervor und qualifiziert Besichtigungen vor — weniger Leerläufe, mehr ernsthafte Interessenten.</p></details>
-          <details class="faq-item"><summary data-i18n="faq_q3">Was ist mit Grundrissen und Massen?</summary><p data-i18n="faq_a3">Der Rundgang ist das emotionale Verkaufselement. Bestehende Grundrisse binden wir gern ein; massstabsgetreue Grundrisse direkt aus dem Scan sind in Vorbereitung.</p></details>
-          <details class="faq-item"><summary data-i18n="faq_q4">Wie aufwändig ist das für mich?</summary><p data-i18n="faq_a4">Minimal. Wir übernehmen alles: Aufnahme vor Ort (ca. 1 Std.), Aufbereitung und Hosting. Sie erhalten einen fertigen Link zum Teilen und Einbetten.</p></details>
-          <details class="faq-item"><summary data-i18n="faq_q5">Wo werden die Daten gehostet?</summary><p data-i18n="faq_a5">Ohne Lock-in und auf Wunsch in der Schweiz. Der Rundgang gehört Ihnen und kann jederzeit gelöscht werden.</p></details>
-          <details class="faq-item"><summary data-i18n="faq_q6">Sieht 3D bei Fenstern und Spiegeln nicht seltsam aus?</summary><p data-i18n="faq_a6">Wir kuratieren jede Aufnahme und prüfen jeden Rundgang vor der Auslieferung. Sie zeigen Ihren Kundinnen und Kunden immer nur das polierte Ergebnis.</p></details>
+    <section class="studio section-shell" id="studio" aria-labelledby="studio-title">
+      <div class="shell studio-grid reveal">
+        <div class="studio-mark"><img class="brand-mark" src="./assets/manzara-mark-limestone.svg" width="220" height="147" alt=""></div>
+        <div class="studio-copy">
+          <p class="kicker" data-i18n="studio_kicker">Studio</p>
+          <h2 id="studio-title" data-i18n="studio_title">Gebaut in Zürich, zwischen Raum und Technologie.</h2>
+          <p data-i18n="studio_body">Manzara verbindet einen ETH-Zürich-Hintergrund in räumlicher Technologie mit einem klaren Blick auf die Immobilienpraxis. Wir beginnen bewusst klein: mit wenigen Objekten, direkter Zusammenarbeit und Ergebnissen, die wir selbst geprüft haben.</p>
+          <p class="studio-location" data-i18n="studio_location">Zürich, Schweiz</p>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-band" id="contact">
-      <div class="container reveal">
-        <h2 data-i18n="cta_h">Bereit, Ihr nächstes Objekt zum Strahlen zu bringen?</h2>
-        <p data-i18n="cta_sub">Erstkunden-Pilot zum Einführungspreis — begrenzt verfügbar.</p>
-        <a href="mailto:hallo@manzara.ch" class="btn btn-primary btn-lg" data-i18n="cta_btn">Pilot anfragen</a>
-        <p class="cta-mail"><a href="mailto:hallo@manzara.ch">hallo@manzara.ch</a></p>
+    <section class="pilot-cta section-shell" id="pilot" aria-labelledby="pilot-title">
+      <div class="shell pilot-grid reveal">
+        <div>
+          <p class="kicker" data-i18n="pilot_kicker">Founding Pilot</p>
+          <h2 id="pilot-title" data-i18n="pilot_title">Haben Sie ein Objekt, das sich dafür eignet?</h2>
+        </div>
+        <div class="pilot-copy">
+          <p data-i18n="pilot_body">Wir suchen eine erste Agentur im Raum Zürich, mit der wir Rundgang und Grundriss an einem echten Verkaufsobjekt umsetzen. Im Gegenzug wünschen wir uns Ihr offenes Feedback. Konditionen und Termin besprechen wir pro Objekt.</p>
+          <a class="button button-light" href="mailto:hallo@manzara.ch?subject=Manzara%20Tour%20Pilot" data-i18n="pilot_cta">Pilot besprechen</a>
+          <!-- PLACEHOLDER: hallo@manzara.ch is not live yet; do not publish until it receives mail (docs/release-checklist.md §1). -->
+          <a class="email-link" href="mailto:hallo@manzara.ch">hallo@manzara.ch</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <span class="wordmark">manzara</span>
-        <p data-i18n="foot_tagline">Fotorealistische 3D-Immobilien-Rundgänge. Ein lokales Studio aus Zürich.</p>
+    <div class="shell footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top" aria-label="Manzara Startseite" data-i18n-aria-label="home_label"><img src="./assets/manzara-wordmark-charcoal.svg" width="150" height="21" alt="Manzara"></a>
+        <p data-i18n="footer_line">Rundgang und Grundriss für Immobilien im Verkauf, aus Zürich.</p>
       </div>
-      <div class="footer-col">
-        <h4 data-i18n="foot_nav_t">Navigation</h4>
-        <a href="#why" data-i18n="nav_benefits">Vorteile</a>
-        <a href="#how" data-i18n="nav_how">Ablauf</a>
-        <a href="#pricing" data-i18n="nav_pricing">Preise</a>
-        <a href="#faq" data-i18n="nav_faq">FAQ</a>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="foot_contact_t">Kontakt</h4>
+      <div class="footer-contact">
+        <p class="footer-label" data-i18n="footer_contact">Kontakt</p>
+        <!-- PLACEHOLDER: hallo@manzara.ch is not live yet; same publication gate as the pilot section. -->
         <a href="mailto:hallo@manzara.ch">hallo@manzara.ch</a>
-        <span data-i18n="foot_city">Zürich, Schweiz</span>
-        <a href="#" data-i18n="foot_imprint">Impressum</a>
-        <a href="#" data-i18n="foot_privacy">Datenschutz</a>
+        <span data-i18n="footer_location">Zürich, Schweiz</span>
+      </div>
+      <div class="footer-legal">
+        <a href="./imprint.html" data-i18n="footer_imprint">Impressum</a>
+        <a href="./privacy.html" data-i18n="footer_privacy">Datenschutz</a>
+        <button class="footer-language" type="button" data-language-trigger data-i18n="footer_language">English</button>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <span>© 2026 Manzara</span>
-      <span data-i18n="foot_made">Mit Sorgfalt gemacht in Zürich.</span>
-    </div>
+    <div class="shell footer-bottom">© 2026 Manzara</div>
   </footer>
 
   <script src="main.js"></script>

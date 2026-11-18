@@ -1,0 +1,15 @@
+{
+  "name": "Manzara",
+  "short_name": "Manzara",
+  "lang": "de-CH",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#F1EDE4",
+  "theme_color": "#F1EDE4",
+  "icons": [
+    { "src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
